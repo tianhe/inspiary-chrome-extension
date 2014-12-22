@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Inspiary Login</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="inspiary.js"></script>
+    <script src="login.js"></script>
+  </head>
+
+  <body>
+    <div id="authentication">
+      <h1>Facebook Login</h1>
+      <p><a target="_blank" href="https://www.facebook.com/dialog/oauth?client_id=819394234788012&response_type=token&scope=email&redirect_uri=https://www.facebook.com/connect/login_success.html">Facebook Connect</a></p>
+    </div>
+  </body>
+</html>
+

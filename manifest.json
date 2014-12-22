@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Inspiary",
+  "description": "This extension adds inspirations (quotes) to inspiary",
+  "version": "1.0",
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://connect.facebook.net; object-src 'self'", 
+  "permissions": [
+    "https://secure.flickr.com/",
+    "http://localhost:3000/",
+    "https://connect.facebook.net/en_US/all.js",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["jquery-2.1.3.min.js", "inspiary.js", "registration.js"]
+  },
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
