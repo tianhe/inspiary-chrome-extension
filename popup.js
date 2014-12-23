@@ -1,6 +1,10 @@
 var Popup = {
   appendInspiration: function(inspiration) {
-    $("#inspirations-list").append("<div class='quote'>"+inspiration.quote+"</div>")
+    $("#inspirations-list").append(
+      "<div class='inspiration'>"+
+      "<div class='quote'>"+inspiration.quote+"</div>"+"<div class='source'>"+"-&nbsp;"+inspiration.source+"</div>"+
+      "</div>"
+    );
   },
 
   loadInspirations: function(inspirations) {
