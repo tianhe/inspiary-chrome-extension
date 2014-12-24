@@ -6,6 +6,25 @@
       body {
         min-width: 357px;
         overflow-x: hidden;
+        background-color: #87A3C2;
+        font-size: 15px;
+        font-family: 'Helvetica Neue', 'Helvetica', arial, sans-serif;
+      }
+
+      .logo {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      .slogan {
+        text-align: center;
+        font-style: italic;
+      }
+      .facebook {
+        margin: 10px auto;
+        background-image: url('/facebook-login.png');
+        height: 46px;
+        width: 202px;
       }
     </style>
 
@@ -22,8 +41,9 @@
 
   <body>
     <div id="authentication">
-      <h1>Facebook Login</h1>
-      <p><a target="_blank" href="https://www.facebook.com/dialog/oauth?client_id=819394234788012&response_type=token&scope=email&redirect_uri=https://www.facebook.com/connect/login_success.html">Facebook Connect</a></p>
+      <div class='logo'>Inspiary</div>
+      <div class='slogan'>Inspirations to live by<div>
+      <a target="_blank" href="https://www.facebook.com/dialog/oauth?client_id=819394234788012&response_type=token&scope=email&redirect_uri=https://www.facebook.com/connect/login_success.html"> <div class='facebook'> </div></a>
     </div>
   </body>
 </html>

@@ -9,6 +9,7 @@
   "permissions": [
     "https://secure.flickr.com/",
     "http://localhost:3000/",
+    "http://*.inspiaryapp.com/",
     "https://connect.facebook.net/en_US/all.js",
     "tabs"
   ],

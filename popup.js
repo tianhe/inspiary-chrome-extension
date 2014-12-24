@@ -30,8 +30,7 @@ $(document).ready(function () {
     Inspiary.logout();    
   });
 
-  $("#inspiration").submit( function() { 
-    event.preventDefault();
+  $("#inspiration.submit-btn").on('click', function() { 
     quote  = $('form#inspiration #quote').val()
     source = $('form#inspiration #source').val()
     note   = $('form#inspiration #note').val()
