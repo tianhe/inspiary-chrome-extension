@@ -24,11 +24,40 @@
       
 
       body {
-        min-width: 357px;
+        width: 357px;
         overflow-x: hidden;
-        background-color: #BCD3E2;
+        /*background-color: #BCD3E2;*/
         font-size: 15px;
         font-family: 'Helvetica Neue', 'Helvetica', arial, sans-serif;
+      }
+
+      .blur-background {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        width: 390px;
+        height: 600px;
+        background: url('/yellow_plains.jpg') no-repeat;
+        background-size: contain;
+        -webkit-filter: blur(1px);
+        -moz-filter: blur(1px);
+        -o-filter: blur(1px);
+        -ms-filter: blur(1px);
+        filter: blur(1px);        
+      }
+
+      .blur-background:hover {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);     
+        transition: 1.5s -webkit-filter linear;   
+        transition: 1.5s -moz-filter linear;   
+        transition: 1s -o-filter linear;   
+        transition: 1s -ms-filter linear;   
       }
 
       img {
@@ -124,12 +153,15 @@
       }
 
       h4 {
+        color: white;
+        text-shadow: 1px 1px gray;
         margin: 10px 0px;
       }
 
       div.inspiration {
         padding: 10px 10px 10px 10px;
-        color: gray;
+        color: white;
+        text-shadow: 1px 1px gray;
         margin-bottom: 25px;
       }
 
@@ -179,6 +211,7 @@
       <div class='btn small-font' id="logout">Log Out</div>
     </div>
  -->
+    <div class='blur-background'></div>
     <div id='form-container'>
       <form id="inspiration" accept-charset="UTF-8" action="/" method="post">
         <div class="form-group">
@@ -200,7 +233,7 @@
       </form>
     </div>
     <div id="inspirations-list">
-      <h4>Quotes to Live By:</h4>
+      <!-- <h4>Quotes to Live By:</h4> -->
     </div>
   </body>
 </html>
