@@ -26,9 +26,9 @@ $(document).ready(function () {
     Inspiary.fetchInspiration(Popup.appendInspiration);
   }
 
-  // $("#logout").on('click', function() {
-  //   Inspiary.logout();    
-  // });
+  $("#logout").on('click', function() {
+    Inspiary.logout();    
+  });
 
   $("#inspiration #submit-btn").on('click', function() { 
     quote  = $('form#inspiration #quote').val()
