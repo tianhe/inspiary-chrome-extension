@@ -3,6 +3,7 @@ var Popup = {
     $("#inspirations-list").append(
       "<div class='inspiration'>"+
       "<div class='quote'>"+inspiration.quote+"</div>"+"<div class='source'>"+"-&nbsp;"+inspiration.source+"</div>"+
+      "<div class='clear'/>"+
       "</div>"
     );
   },
@@ -16,21 +17,20 @@ var Popup = {
 
 $(document).ready(function () {
   if (!localStorage.accessToken) {
-    chrome.browserAction.setPopup({popup: "login.html"});
-    return;
+    window.location.href="login.html";
 
   } else if (!localStorage.apiToken) {
     Inspiary.authenticate();
     
   } else {
-    Inspiary.fetchInspirations(Popup.loadInspirations);
+    Inspiary.fetchInspiration(Popup.appendInspiration);
   }
 
-  $("#logout").on('click', function() {
-    Inspiary.logout();    
-  });
+  // $("#logout").on('click', function() {
+  //   Inspiary.logout();    
+  // });
 
-  $("#inspiration.submit-btn").on('click', function() { 
+  $("#inspiration #submit-btn").on('click', function() { 
     quote  = $('form#inspiration #quote').val()
     source = $('form#inspiration #source').val()
     note   = $('form#inspiration #note').val()

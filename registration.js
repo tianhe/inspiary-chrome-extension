@@ -1,6 +1,7 @@
 var successURL = 'https://www.facebook.com/connect/login_success.html';
 
 function onFacebookLogin() {
+
   if(!localStorage.accessToken) {
     chrome.tabs.getAllInWindow(null, function(tabs) {
       for (var i = 0; i < tabs.length; i++) {

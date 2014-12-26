@@ -3,10 +3,30 @@
   <head>
     <title>Facebook Popup</title>
     <style>
+      .orange {
+        background-color: #F7AF02;
+      }
+      .blue {
+        background-color: #87A3C2;
+      }
+      .light-blue {        
+        background-color: #BCD3E2;
+      }
+      .teal {
+        background-color: #86D1CB;
+      }
+      .orange {
+        background-color: #F7AF02;
+      }
+      .coffee {
+        background-color: #DEBF87;
+      }
+      
+
       body {
         min-width: 357px;
         overflow-x: hidden;
-        background-color: #87A3C2;
+        background-color: #BCD3E2;
         font-size: 15px;
         font-family: 'Helvetica Neue', 'Helvetica', arial, sans-serif;
       }
@@ -31,7 +51,7 @@
         width: 315px;
         padding: 10px;
         border: none;
-        font-size: 12px;
+        font-size: 15px;
         /*font-family: 'Helvetica Neue', 'Helvetica', arial, sans-serif;*/
       }
 
@@ -109,8 +129,8 @@
 
       div.inspiration {
         padding: 10px 10px 10px 10px;
-        background-color: lightgray;
-        margin-bottom: 15px;
+        color: gray;
+        margin-bottom: 25px;
       }
 
       div.quote {
@@ -137,6 +157,9 @@
         height: 10px;
         padding: 5px 10px 10px 0px;
       }
+      .clear {
+        clear: both;
+      }
     </style>
 
     <!--
@@ -151,11 +174,11 @@
   </head>
 
   <body>
-    <div id='logout-container'>
+<!--     <div id='logout-container'>
       <span class='logo large-font'>Inspiary - Inspirations to Live By</span>
       <div class='btn small-font' id="logout">Log Out</div>
     </div>
-
+ -->
     <div id='form-container'>
       <form id="inspiration" accept-charset="UTF-8" action="/" method="post">
         <div class="form-group">
