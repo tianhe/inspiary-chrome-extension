@@ -1,8 +1,8 @@
 var Inspiary = {
-  domain_: 'http://localhost:3000',
-  authenticationURL_: 'http://localhost:3000/v1/authentications',
-  //domain_: 'http://www.inspiaryapp.com',
-  //authenticationURL_: 'http://www.inspiaryapp.com/v1/authentications',
+  // domain_: 'http://localhost:3000',
+  // authenticationURL_: 'http://localhost:3000/v1/authentications',
+  domain_: 'http://www.inspiaryapp.com',
+  authenticationURL_: 'http://www.inspiaryapp.com/v1/authentications',
   authenticated_: false,
 
   authenticate: function() {
