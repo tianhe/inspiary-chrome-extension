@@ -1,9 +1,12 @@
 var Popup = {
   appendInspiration: function(inspiration) {
     $("#inspirations-list").append(
+
       "<div class='inspiration'>"+
-      "<div class='quote'>"+inspiration.quote+"</div>"+"<div class='source'>"+"-&nbsp;"+inspiration.source+"</div>"+
+      "<div class='quote'>"+inspiration.quote+"</div>"+"<div class='author'>"+
+      "-&nbsp;"+(inspiration.authors[0] ? inspiration.authors[0].full_name : "Anonymous")+"</div>"+
       "<div class='clear'/>"+
+      "<div class='source'>"+inspiration.source+"</div>"+
       "</div>"
     );
   },
@@ -32,10 +35,11 @@ $(document).ready(function () {
 
   $("#inspiration #submit-btn").on('click', function() { 
     quote  = $('form#inspiration #quote').val()
+    name   = $('form#inspiration #name').val()
     source = $('form#inspiration #source').val()
     note   = $('form#inspiration #note').val()
 
-    Inspiary.postInspiration({quote: quote, source: source, note: note}, Popup.loadInspirations);
+    Inspiary.postInspiration({quote: quote, authors_attributes: [{full_name: name}], source: source, note: note}, Popup.loadInspirations);
   });
 
 });
