@@ -3,7 +3,7 @@
 
   "name": "Inspiary",
   "description": "This extension adds inspirations (quotes) to inspiary",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://connect.facebook.net; object-src 'self'", 
   "permissions": [
